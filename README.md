@@ -1,4 +1,4 @@
-# Curl-Enum
+# Curly
 
 ## Description
 
@@ -28,8 +28,8 @@ The following arguments are accepted by the script:
    First, clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/pablo-972/Curl-Enum
-   cd curl-enum
+   git clone https://github.com/pablo-972/Curly
+   cd curly
    ```
 
 2. **Grant execution permissions**:
@@ -37,7 +37,7 @@ The following arguments are accepted by the script:
    To execute the script, ensure that it has execution permissions:
 
    ```bash
-   chmod +x curl-enum.sh
+   chmod +x curly.sh
    ```
 
 ## Basic Usage
@@ -45,7 +45,7 @@ The following arguments are accepted by the script:
 Once the script is ready, you can run the route enumeration with the following basic command:
 
 ```bash
-./curl-enum.sh -u <url> -l <route_list> [-c] [-s]
+./curly.sh -u <url> -l <route_list> [-c] [-s]
 ```
 
 
@@ -54,7 +54,7 @@ Once the script is ready, you can run the route enumeration with the following b
 If you want to see the response content and search for certain keywords (like "pass", "user", or "name") within those responses, you can use the following command:
 
 ```bash
-./curl-enum.sh -u 'https://www.example.com' -l routes.txt [-c] | grep -E "pass|user|name"
+./curly.sh -u 'https://www.example.com' -l routes.txt [-c] | grep -E "pass|user|name"
 ```
 
 This will do the following:
