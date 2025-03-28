@@ -26,7 +26,8 @@ echo -e "By Sulkaz\n"
 
 # How to use it
 usage() {
-    echo "Usage: $0 -u <url> -l <route_list> [-c] [-s]"
+    echo -e "Usage: $0 -u <url> -l <route_list> [-c] [-s]\n"
+    echo "Options:"
     echo "  -u    url"
     echo "  -l    route_list file"
     echo "  -c    content of the response"
@@ -42,22 +43,14 @@ show_status=0
 # Arguments
 while getopts ":h:u:l:cs" opt; do
     case $opt in
-        u)
-            url=$OPTARG
-            ;;
-        l)
-            route_list=$OPTARG
-            ;;
-        c)
-            show_content=1
-            ;;
+        u) url=$OPTARG ;;
+        l) route_list=$OPTARG ;;
+        c) show_content=1 ;;
         s)
             show_status=1
             show_content=0
             ;;
-        h)
-            usage
-            ;;
+        h) usage ;;
         \?)
             echo "Invalid option: -$OPTARG"
             usage
